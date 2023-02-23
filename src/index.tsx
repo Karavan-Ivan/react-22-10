@@ -1,25 +1,50 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-// const title = React.createElement('h1', { id: 'title' }, 'Hello React.js')
-const title = <h1 id="title">Hello React.js</h1>
-const content = (
-    <div>
-        {title}
-        {10 + 10}
-        <ul className="list">
-            <li>List item 1</li>
-            <li>List item 2</li>
-            <li>List item 3</li>
-        </ul>
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
-            libero ab commodi velit a alias quo facere, iste fugiat in aut rem
-            nam dignissimos perspiciatis nihil similique laudantium placeat!
-            Quis?
-        </p>
-    </div>
-)
-
+type TitleProps = {
+    name: string
+    text: string
+    year: number
+}
+const Title = ({ name, text, year }: TitleProps) => {
+    return (
+        <>
+            <h1>Hello {name}</h1>
+            <p>{text}</p>
+            <div>Year: {year}</div>
+        </>
+    )
+}
+function List() {
+    return (
+        <>
+            <ul>
+                <li>list</li>
+                <li>list</li>
+                <li>list</li>
+            </ul>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
+                dolor nulla similique veniam voluptatum ratione maiores totam
+                sint accusantium id cumque nemo earum quisquam itaque? Cumque
+                ipsa aperiam consequatur quis!
+            </p>
+        </>
+    )
+}
+const App = () => {
+    return (
+        <div className="app">
+            <Title name="App" text="Lorem" year={2021} />
+            <Title name="React" text="Lorem" year={2022} />
+            <Title name="TS" text="Lorem" year={2023} />
+            <List />
+        </div>
+    )
+}
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
-root.render(<React.StrictMode>{content}</React.StrictMode>)
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+)

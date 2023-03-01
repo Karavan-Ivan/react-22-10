@@ -7,6 +7,7 @@ type TitleProps = {
     text: string
     year: number
 }
+// const Title = ({ name = 'Jack', text, year }: TitleProps) => {
 const Title = ({ name, text, year }: TitleProps) => {
     return (
         <>

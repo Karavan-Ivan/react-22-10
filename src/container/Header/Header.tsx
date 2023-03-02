@@ -13,7 +13,7 @@ const Header = (props: Props) => {
     return (
         <>
             <AppBar position="static" className="app-bar">
-                <Container>
+                <Container maxWidth="md">
                     <Toolbar>
                         <IconButton
                             size="large"

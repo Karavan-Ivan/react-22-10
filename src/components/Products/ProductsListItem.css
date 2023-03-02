@@ -25,4 +25,13 @@
 .btns-wrap {
   display: flex;
   justify-content: center;
+}
+
+.product-image {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.product-image img {
+  width: 150px;
+  height: auto;
 }/*# sourceMappingURL=ProductsListItem.css.map */

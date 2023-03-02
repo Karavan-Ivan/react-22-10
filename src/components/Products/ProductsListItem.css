@@ -34,4 +34,12 @@
 .product-image img {
   width: 150px;
   height: auto;
+}
+
+.product-quantity {
+  display: flex;
+  margin-top: 10px;
+}
+.product-quantity input {
+  text-align: center;
 }/*# sourceMappingURL=ProductsListItem.css.map */

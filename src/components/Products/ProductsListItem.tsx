@@ -63,7 +63,7 @@ const ProductsListItem = ({
                 </div>
             </CardContent>
             <CardActions className="btns-wrap">
-                <Button variant="outlined">Add to card</Button>
+                <Button variant="outlined">Add to cart</Button>
             </CardActions>
         </Card>
     )

@@ -29,8 +29,8 @@ const ProductsListItem = ({
     const onIncrement = () => {
         setCount((prevState) => prevState + 1)
     }
-    const onDecrement = (num: number) => {
-        setCount((prevState) => prevState - num)
+    const onDecrement = () => {
+        setCount((prevState) => prevState - 1)
     }
 
     return (
@@ -47,7 +47,7 @@ const ProductsListItem = ({
                 <div className="product-quantity">
                     <Button
                         variant="outlined"
-                        onClick={() => onDecrement(1)}
+                        onClick={() => onDecrement()}
                         disabled={count <= 1}
                     >
                         -

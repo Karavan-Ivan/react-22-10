@@ -9,12 +9,11 @@ import CartHeeader from 'components/CartHeader/CartHeeader'
 import './Header.scss'
 
 type Props = {
-    cartData: {
-        totalCount: number
-        totalPrice: number
+    productsInCart: {
+        [id: number]: number
     }
 }
-const Header = ({ cartData }: Props) => {
+const Header = ({ productsInCart }: Props) => {
     return (
         <>
             <AppBar position="static" className="app-bar">
@@ -31,7 +30,7 @@ const Header = ({ cartData }: Props) => {
                         </IconButton>
                         <Logo />
                         <Menu />
-                        <CartHeeader cartData={cartData} />
+                        <CartHeeader productsInCart={productsInCart} />
                     </Toolbar>
                 </Container>
             </AppBar>

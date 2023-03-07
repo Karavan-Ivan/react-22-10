@@ -39,9 +39,6 @@ const App = (props: Props) => {
         <StyledEngineProvider injectFirst>
             <CssBaseline />
             <Header productsInCart={productsInCart} />
-            <button onClick={() => removeProductFromCart(2)}>
-                Remove product (id:2)
-            </button>
             <Container
                 sx={{
                     padding: '60px 0',
@@ -54,7 +51,12 @@ const App = (props: Props) => {
                     />
                     <Route
                         path="/cart"
-                        element={<CartPage productsInCart={productsInCart} />}
+                        element={
+                            <CartPage
+                                productsInCart={productsInCart}
+                                removeProductFromCart={removeProductFromCart}
+                            />
+                        }
                     />
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/shipping" element={<ShippingPage />} />
